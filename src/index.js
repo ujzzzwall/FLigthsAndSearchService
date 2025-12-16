@@ -3,12 +3,16 @@ const BodyParser = require("body-parser");
 
 const {PORT} = require('./config/serverConfig')
 
+const ApiRoutes = require('./routes/index')
+
 const setupAndStartServer = async ()=>{
   //create the express object
   const app = express();
 
   app.use(BodyParser.json());
   app.use(BodyParser.urlencoded({extended:true}));
+
+  app.use('/api', ApiRoutes);
 
   app.listen(PORT , ()=>{
     console.log(`server started at port no ${PORT}`); 
@@ -17,3 +21,4 @@ const setupAndStartServer = async ()=>{
 }
 
 setupAndStartServer();
+

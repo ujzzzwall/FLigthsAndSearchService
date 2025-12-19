@@ -47,7 +47,7 @@ data using Node.js, Express, Sequelize, and MySQL.
   - #### similarly we perform for other tables
 
 ### Airport Table
-- from above method create table
+- from above method create Airport table -> `` npx sequelize model:generate --name City --attributes name:String,address:String,cityId:integer``
 - associate it with city model as ` one city has many airports ` so ` 1 to many relation`
 - for association in city.js
 ``` 

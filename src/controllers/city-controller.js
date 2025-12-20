@@ -102,10 +102,20 @@ const getAll = async (req,res)=>{
   }
 }
 
-module.exports = {
-  create ,
+// module.exports = {
+//   create ,
+//   update,
+//   destroy,
+//   get,
+//   getAll
+// }
+
+
+const cityController = {create ,
   update,
   destroy,
   get,
   getAll
-}
+} 
+
+module.exports = {cityController}
